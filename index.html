@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Small Medium - Contemporary clothing brand blending modern streetwear with South Asian aesthetics."
+    />
+    <title>Small Medium | Editorial Streetwear</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: "#F5F5DC",
+              charcoal: "#333333",
+              gold: "#B58B47"
+            },
+            fontFamily: {
+              serifDisplay: ["Playfair Display", "serif"],
+              sansBody: ["Manrope", "sans-serif"]
+            },
+            boxShadow: {
+              editorial: "0 16px 40px -20px rgba(51, 51, 51, 0.35)"
+            }
+          }
+        }
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: #f5f5dc;
+        color: #333333;
+      }
+
+      .grain-bg {
+        background-image: radial-gradient(rgba(51, 51, 51, 0.06) 0.4px, transparent 0.4px);
+        background-size: 8px 8px;
+      }
+
+      .gold-line {
+        position: relative;
+      }
+
+      .gold-line::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.35rem;
+        width: 3.5rem;
+        height: 2px;
+        background: linear-gradient(90deg, #b58b47, transparent);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.75s ease, transform 0.75s ease;
+      }
+
+      .reveal.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .hero-overlay {
+        background: linear-gradient(104deg, rgba(51, 51, 51, 0.74) 6%, rgba(51, 51, 51, 0.28) 52%, rgba(51, 51, 51, 0.08) 100%);
+      }
+    </style>
+  </head>
+
+  <body class="font-sansBody antialiased selection:bg-gold selection:text-cream">
+    <div class="grain-bg min-h-screen">
+      <header class="sticky top-0 z-50 border-b border-charcoal/10 bg-cream/90 backdrop-blur-md">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10" aria-label="Main navigation">
+          <a href="#home" class="font-serifDisplay text-xl tracking-[0.22em] text-charcoal">SMALL MEDIUM</a>
+
+          <button
+            id="menuToggle"
+            class="rounded border border-charcoal/25 px-3 py-2 text-sm uppercase tracking-[0.14em] text-charcoal md:hidden"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            aria-label="Toggle navigation menu"
+          >
+            Menu
+          </button>
+
+          <ul class="hidden items-center gap-10 text-sm font-medium uppercase tracking-[0.14em] md:flex">
+            <li><a href="#collections" class="transition hover:text-gold">Collections</a></li>
+            <li><a href="#about" class="transition hover:text-gold">About</a></li>
+            <li><a href="#contact" class="transition hover:text-gold">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div id="mobileMenu" class="hidden border-t border-charcoal/10 px-6 pb-5 pt-3 md:hidden">
+          <ul class="space-y-3 text-sm font-medium uppercase tracking-[0.14em]">
+            <li><a href="#collections" class="block py-1 transition hover:text-gold">Collections</a></li>
+            <li><a href="#about" class="block py-1 transition hover:text-gold">About</a></li>
+            <li><a href="#contact" class="block py-1 transition hover:text-gold">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main id="home">
+        <section class="relative isolate overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1920&q=80"
+            alt="Indian fashion model in contemporary streetwear standing in an urban setting"
+            class="h-[78vh] w-full object-cover object-center md:h-[88vh]"
+          />
+          <div class="hero-overlay absolute inset-0"></div>
+
+          <div class="absolute inset-0 mx-auto flex max-w-7xl items-center px-6 md:px-10">
+            <div class="max-w-2xl text-cream reveal">
+              <p class="mb-4 text-xs uppercase tracking-[0.28em] text-cream/80">New Season 2026</p>
+              <h1 class="font-serifDisplay text-4xl leading-tight md:text-6xl lg:text-7xl">
+                Precision Tailoring Meets Street Rhythm
+              </h1>
+              <p class="mt-5 max-w-xl text-base leading-relaxed text-cream/90 md:text-lg">
+                Small Medium crafts a modern South Asian silhouette with sharp structure, fluid layering, and city-ready ease.
+              </p>
+              <a
+                href="#collections"
+                class="mt-8 inline-flex items-center rounded-sm border border-gold bg-gold px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-cream transition hover:bg-transparent hover:text-gold"
+              >
+                View Collection
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="collections" class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24">
+          <div class="mb-12 md:mb-16 reveal">
+            <p class="text-xs uppercase tracking-[0.22em] text-charcoal/70">Featured Edit</p>
+            <h2 class="gold-line mt-2 font-serifDisplay text-3xl md:text-5xl">Contemporary Essentials</h2>
+          </div>
+
+          <div class="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="group overflow-hidden rounded-sm border border-charcoal/15 bg-cream/70 shadow-editorial reveal">
+              <div class="overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+                  alt="Sri Lankan woman model wearing a modern cream-toned fusion outfit"
+                  class="h-96 w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="space-y-2 p-6">
+                <h3 class="font-serifDisplay text-2xl">Ivory Transit Set</h3>
+                <p class="text-sm leading-relaxed text-charcoal/80">
+                  Structured layers cut in breathable textures for warm city evenings.
+                </p>
+              </div>
+            </article>
+
+            <article class="group overflow-hidden rounded-sm border border-charcoal/15 bg-cream/70 shadow-editorial reveal">
+              <div class="overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=900&q=80"
+                  alt="Indian male model in charcoal jacket styled with modern South Asian streetwear"
+                  class="h-96 w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="space-y-2 p-6">
+                <h3 class="font-serifDisplay text-2xl">Charcoal Utility Line</h3>
+                <p class="text-sm leading-relaxed text-charcoal/80">
+                  Precision outerwear with subtle drape, built for movement and edge.
+                </p>
+              </div>
+            </article>
+
+            <article class="group overflow-hidden rounded-sm border border-charcoal/15 bg-cream/70 shadow-editorial reveal">
+              <div class="overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+                  alt="South Asian fashion model in gold-accented contemporary outfit"
+                  class="h-96 w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="space-y-2 p-6">
+                <h3 class="font-serifDisplay text-2xl">Gold Thread Capsule</h3>
+                <p class="text-sm leading-relaxed text-charcoal/80">
+                  Minimal silhouettes elevated through metallic accents and hand-finish detail.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="about" class="mx-auto max-w-7xl px-6 pb-20 md:px-10 md:pb-24">
+          <div class="overflow-hidden rounded-sm border border-charcoal/15 bg-cream/70 shadow-editorial md:grid md:grid-cols-2">
+            <div class="p-8 md:p-14 reveal">
+              <p class="text-xs uppercase tracking-[0.22em] text-charcoal/70">About Small Medium</p>
+              <h2 class="gold-line mt-3 font-serifDisplay text-3xl leading-tight md:text-4xl">
+                Crafted Between Heritage and Future
+              </h2>
+              <p class="mt-8 text-base leading-relaxed text-charcoal/85">
+                We design garments for the in-between moments: bold enough for the street, refined enough for the page.
+                Inspired by Sri Lankan and Indian visual culture, our collections pair clean architecture with soft tailoring.
+              </p>
+              <p class="mt-5 text-base leading-relaxed text-charcoal/85">
+                Every drop is built around responsible fabrics, measured production, and details that hold their own over time.
+              </p>
+            </div>
+
+            <div class="relative min-h-[22rem] reveal">
+              <img
+                src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80"
+                alt="Indian and Sri Lankan inspired contemporary fashion portrait with layered textiles"
+                class="h-full w-full object-cover"
+              />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal/25 to-transparent"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact" class="border-t border-charcoal/15 bg-charcoal px-6 py-12 text-cream md:px-10 md:py-14">
+        <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
+          <div class="reveal">
+            <p class="font-serifDisplay text-2xl tracking-[0.16em]">SMALL MEDIUM</p>
+            <p class="mt-3 max-w-sm text-sm leading-relaxed text-cream/80">
+              Contemporary clothing for expressive city life. Rooted in South Asian identity, tailored for global movement.
+            </p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="text-xs uppercase tracking-[0.2em] text-cream/75">Social</h3>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li><a href="https://instagram.com" target="_blank" rel="noreferrer" class="transition hover:text-gold">Instagram</a></li>
+              <li><a href="https://pinterest.com" target="_blank" rel="noreferrer" class="transition hover:text-gold">Pinterest</a></li>
+              <li><a href="https://x.com" target="_blank" rel="noreferrer" class="transition hover:text-gold">X / Twitter</a></li>
+            </ul>
+          </div>
+
+          <div class="reveal">
+            <h3 class="text-xs uppercase tracking-[0.2em] text-cream/75">Newsletter</h3>
+            <form class="mt-4 flex flex-col gap-3 sm:flex-row" action="#" method="post">
+              <label class="sr-only" for="email">Email address</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+                class="w-full border border-cream/35 bg-transparent px-4 py-3 text-sm text-cream placeholder:text-cream/55 focus:border-gold focus:outline-none"
+              />
+              <button
+                type="submit"
+                class="border border-gold bg-gold px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-cream transition hover:bg-transparent hover:text-gold"
+              >
+                Join
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="mx-auto mt-10 max-w-7xl border-t border-cream/20 pt-6 text-xs uppercase tracking-[0.12em] text-cream/65">
+          <p>&copy; <span id="year"></span> Small Medium. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const year = document.getElementById("year");
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+
+      year.textContent = new Date().getFullYear();
+
+      menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.18,
+          rootMargin: "0px 0px -40px 0px"
+        }
+      );
+
+      document.querySelectorAll(".reveal").forEach((element, index) => {
+        element.style.transitionDelay = `${Math.min(index * 70, 320)}ms`;
+        observer.observe(element);
+      });
+    </script>
+  </body>
+</html>
